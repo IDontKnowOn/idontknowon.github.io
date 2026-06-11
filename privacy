@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idk Bot - Política de Privacidad</title>
+    <style>
+        /* Mismo CSS base para uniformidad */
+        :root { --bg-main: #0b0c10; --bg-card: #1f2833; --accent-red: #e63946; --text-main: #c5c6c7; --text-light: #ffffff; --accent-muted: #66fcf1; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; padding-bottom: 60px; }
+        .navbar { background-color: rgba(11, 12, 16, 0.95); border-bottom: 2px solid var(--bg-card); position: sticky; top: 0; z-index: 1000; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 24px; font-weight: bold; color: var(--text-light); letter-spacing: 2px; }
+        .navbar .logo span { color: var(--accent-red); }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-red); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .card { background-color: var(--bg-card); border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid var(--accent-red); }
+        .card h2 { color: var(--text-light); margin-bottom: 15px; font-size: 22px; }
+        .card h3 { color: var(--text-light); margin-top: 20px; margin-bottom: 10px; font-size: 18px; }
+        ul { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .social-link { color: var(--accent-muted); text-decoration: none; font-weight: bold; }
+        .footer { text-align: center; padding: 30px; margin-top: 60px; font-size: 14px; color: #606f7b; border-top: 1px solid var(--bg-card); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Idk<span>Bot</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="docs.html">Documentación</a></li>
+            <li><a href="privacy.html" class="active">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Política de Privacidad de Idk Bot</h2>
+            <p><strong>Fecha de vigencia:</strong> Junio de 2026</p>
+            <p style="margin-top: 15px;">En <strong>IDontKnowOn</strong> nos tomamos muy en serio la privacidad. Esta política detalla cómo procesamos la información dentro de la plataforma Discord para garantizar un ecosistema blindado.</p>
+            
+            <h3>1. Datos que recopilamos</h3>
+            <ul>
+                <li><strong>IDs de Usuario y Nombres:</strong> Requeridos exclusivamente para gestionar logs internos de moderación y listas de advertencias.</li>
+                <li><strong>IDs de Servidores (Guild IDs):</strong> Necesarios para salvar las configuraciones de canales y módulos automatizados del bot.</li>
+                <li><strong>Contenido de Mensajes (Transitorio):</strong> Evaluado en tiempo real en los canales configurados como Honeypot para neutralizar scripts maliciosos y self-bots de forma inmediata. No almacenamos registros permanentes de tus conversaciones.</li>
+            </ul>
+
+            <h3>2. Uso de la Información</h3>
+            <p>Los datos procesados se destinan únicamente al mantenimiento de los módulos de seguridad perimetral, la infraestructura del ticket log y los automatismos de streaming multimedia.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 IDontKnowOn. Creado por <a href="https://instagram.com/NoSoyCorona" class="social-link" target="_blank">@NoSoyCorona</a>. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
