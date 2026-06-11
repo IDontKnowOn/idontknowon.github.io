@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idk Bot - Oficial</title>
+    <style>
+        :root {
+            --bg-main: #0b0c10;
+            --bg-card: #1f2833;
+            --accent-red: #e63946;
+            --text-main: #c5c6c7;
+            --text-light: #ffffff;
+            --accent-muted: #66fcf1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .navbar {
+            background-color: rgba(11, 12, 16, 0.95);
+            border-bottom: 2px solid var(--bg-card);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-light);
+            letter-spacing: 2px;
+        }
+
+        .navbar .logo span {
+            color: var(--accent-red);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-red);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-main) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #95a5a6;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+            border-color: var(--text-light);
+        }
+
+        .btn-discord {
+            background-color: #5865F2;
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+        }
+
+        .btn-discord:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent-red);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .social-link {
+            color: var(--accent-muted);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-link:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 14px;
+            color: #606f7b;
+            border-top: 1px solid var(--bg-card);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Idk<span>Bot</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="docs.html">Documentación</a></li>
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>¡Hola! soy Idk Bot</h1>
+            <p>El bot definitivo e inteligente para el servidor oficial de Idk. Seguridad impenetrable, bardo controlado y streaming automatizado.</p>
+            <div class="btn-group">
+                <a href="https://discord.com/oauth2/authorize?client_id=1514542533999329381" class="btn btn-primary" target="_blank">Invitar Bot</a>
+                <a href="https://discord.gg/v9Yydbndmk" class="btn btn-discord" target="_blank">Entrar al Servidor de Discord</a>
+                <a href="docs.html" class="btn btn-secondary">Comandos</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💥 Únete a nuestra comunidad: ¡Idk Server!</h2>
+            <p>¿Buscas desmadre, carrilla, bardo controlado y una zona libre de acoso? Te estamos esperando en la base de operaciones oficial. Usa el bot, interactúa con la plebada y forma parte de un servidor blindado al 100%. <a href="https://discord.gg/v9Yydbndmk" class="social-link" target="_blank">Dale click aquí para unirte con nuestra invitación oficial</a>.</p>
+        </div>
+
+        <div class="card">
+            <h2>🛡️ Seguridad Avanzada (Honeypot Integrado)</h2>
+            <p>Idk Bot cuenta con un módulo de ciberseguridad industrial diseñado para proteger comunidades. Su sistema trampa detecta instantáneamente cuentas hackeadas, scripts maliciosos y self-bots antes de que puedan causar daño, aplicando baneos globales automatizados.</p>
+        </div>
+
+        <div class="card">
+            <h2>🍿 Módulo de Streaming Automatizado</h2>
+            <p>Mantén tus canales activos 24/7 sin esfuerzo. Idk Bot genera de forma programada recomendaciones diarias con fichas técnicas completas, embeds personalizados y enlaces directos de reproducción para Anime y Manga.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 IDontKnowOn. Creado por <a href="https://instagram.com/NoSoyCorona" class="social-link" target="_blank">@NoSoyCorona</a>. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
