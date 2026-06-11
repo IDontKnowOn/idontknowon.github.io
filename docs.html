@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idk Bot - Documentación</title>
+    <style>
+        /* Reutiliza exactamente los mismos estilos del root y navbar de arriba */
+        :root {
+            --bg-main: #0b0c10;
+            --bg-card: #1f2833;
+            --accent-red: #e63946;
+            --text-main: #c5c6c7;
+            --text-light: #ffffff;
+            --accent-muted: #66fcf1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; padding-bottom: 60px; }
+        .navbar { background-color: rgba(11, 12, 16, 0.95); border-bottom: 2px solid var(--bg-card); position: sticky; top: 0; z-index: 1000; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 24px; font-weight: bold; color: var(--text-light); letter-spacing: 2px; }
+        .navbar .logo span { color: var(--accent-red); }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-red); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .card { background-color: var(--bg-card); border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid var(--accent-red); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .card h2 { color: var(--text-light); margin-bottom: 15px; font-size: 22px; }
+        .card h3 { color: var(--text-light); margin-top: 20px; margin-bottom: 10px; font-size: 18px; }
+        .social-link { color: var(--accent-muted); text-decoration: none; font-weight: bold; }
+        .social-link:hover { color: var(--text-light); text-decoration: underline; }
+        .footer { text-align: center; padding: 30px; margin-top: 60px; font-size: 14px; color: #606f7b; border-top: 1px solid var(--bg-card); }
+        
+        /* Estilos específicos de tablas */
+        .cmd-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .cmd-table th, .cmd-table td { padding: 12px 15px; text-align: left; }
+        .cmd-table th { background-color: rgba(230, 57, 70, 0.1); color: var(--text-light); font-weight: 600; border-bottom: 2px solid var(--bg-main); }
+        .cmd-table td { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .cmd-table code { background-color: rgba(230, 57, 70, 0.15); color: var(--accent-red); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Idk<span>Bot</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="docs.html" class="active">Documentación</a></li>
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>📚 Documentación del Bot</h2>
+            <p>Idk Bot utiliza la infraestructura de Comandos Diagonales (Slash Commands). A continuación se detallan los módulos configurados y activos.</p>
+        </div>
+
+        <div class="card">
+            <h2>⚙️ Módulo de Moderación y Soporte</h2>
+            <table class="cmd-table">
+                <tr>
+                    <th>Comando</th>
+                    <th>Descripción</th>
+                    <th>Permisos</th>
+                </tr>
+                <tr>
+                    <td><code>/clear [cantidad]</code></td>
+                    <td>Limpia mensajes masivos de un canal de texto plano rápidamente.</td>
+                    <td>Staff</td>
+                </tr>
+                <tr>
+                    <td><code>/ticket setup</code></td>
+                    <td>Configura el panel interactivo de soporte en canales de atención.</td>
+                    <td>Administrador</td>
+                </tr>
+                <tr>
+                    <td><code>/warn [usuario] [razón]</code></td>
+                    <td>Aplica una advertencia formal registrándola en el sistema del búnker.</td>
+                    <td>Staff</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🍿 Módulo de Entretenimiento & Streaming</h2>
+            <table class="cmd-table">
+                <tr>
+                    <th>Comando</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td><code>/anime [nombre]</code></td>
+                    <td>Busca y despliega la ficha técnica completa, estado y sinopsis de un anime.</td>
+                </tr>
+                <tr>
+                    <td><code>/manga [nombre]</code></td>
+                    <td>Muestra detalles completos, tomos e información clave de un manga.</td>
+                </tr>
+                <tr>
+                    <td><code>/daily trigger</code></td>
+                    <td>Fuerza manualmente el bucle de envío de la recomendación diaria (Solo Devs).</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 IDontKnowOn. Creado por <a href="https://instagram.com/NoSoyCorona" class="social-link" target="_blank">@NoSoyCorona</a>. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
